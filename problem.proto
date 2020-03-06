@@ -1,0 +1,43 @@
+syntax = "proto3";
+package problem;
+
+option optimize_for = SPEED;
+
+message Matrix {
+  repeated float time = 1 [packed=true];
+}
+
+message Location{
+  uint32 longitude = 1;
+  uint32 latitude = 2;
+  uint32 matrix_index = 3;
+}
+
+message Service {
+  repeated int64 quantities = 1;
+  uint32 duration = 2;
+  uint32 matrix_index = 3;
+  Location location = 4;
+}
+
+message Capacity {
+  int64 limit = 1;
+  float overload_multiplier = 2;
+  bool counting = 3;
+}
+
+message Vehicle {
+  string id = 1;
+  repeated Capacity capacities = 2;
+  // TimeWindow time_window = 3;
+  Location start_location = 4;
+  Location end_location = 5;
+  int64 duration = 6;
+  int32 day_index = 7;
+}
+
+message Problem {
+  repeated Vehicle vehicles = 1;
+  repeated Service services = 2;
+  repeated Matrix matrices = 3;
+}
