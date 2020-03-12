@@ -18,10 +18,10 @@ problem.pb.h: problem.pb.cc
 %.o: %.cc %.h
 	$(CCC) $(CFLAGS) -c $< -o $@
 
-clustering.o: clustering.cc problem.pb.h $(OR_TOOLS_SOURCES)/linear_solver/linear_solver.h
-	$(CCC) $(CFLAGS) -c clustering.cc -o clustering.o
+clustering.o: ./clustering.cc ./problem.pb.h $(OR_TOOLS_SOURCES)/linear_solver/linear_solver.h
+	$(CCC) $(CFLAGS) -c ./clustering.cc -o clustering.o
 
-clustering: $(ROUTING_DEPS) clustering.o  problem.pb.o $(OR_TOOLS_TOP)/lib/libortools.so
+clustering: $(ROUTING_DEPS) clustering.o problem.pb.o $(OR_TOOLS_TOP)/lib/libortools.so
 	$(CCC) $(CFLAGS) -g clustering.o problem.pb.o $(OR_TOOLS_LD_FLAGS) \
 	-L $(OR_TOOLS_TOP)/lib -lortools -L $(OR_TOOLS_TOP)/dependencies/install/lib -lprotobuf -lglog -lgflags \
 	-Wl,-rpath,$(OR_TOOLS_TOP)/dependencies/install/lib -Wl,-rpath,$(OR_TOOLS_TOP)/lib \
