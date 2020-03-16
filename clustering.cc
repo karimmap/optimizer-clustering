@@ -1,7 +1,5 @@
 #include "./limits.h"
 #include "ortools/base/logging.h"
-#include "ortools/linear_solver/linear_solver.h"
-#include "ortools/linear_solver/linear_solver.pb.h"
 #include <algorithm>
 #include <cstddef>
 #include <fstream>
@@ -14,6 +12,10 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
+#include "ortools/linear_solver/linear_solver.h"
+#include "ortools/linear_solver/linear_solver.pb.h"
+
 
 #include "problem.pb.h"
 //#include "clusteringData.h"
@@ -110,8 +112,10 @@ void run() {
     }
 
   // Create the linear solver with the GLOP backend.
-  MPSolver solver("simple_lp_program", MPSolver::GLOP_LINEAR_PROGRAMMING);
+  // MPSolver solver("simple_lp_program", MPSolver::GLOP_LINEAR_PROGRAMMING);
+  MPSolver solver("simple_mip_program", MPSolver::CBC_MIXED_INTEGER_PROGRAMMING);
   // Create the variables y.
+
 
   MPVariable*** const Y = new MPVariable**[problem.vehicles_size()];
   for (int k = 0; k < problem.vehicles_size(); ++k) {
@@ -139,6 +143,7 @@ void run() {
   for (int k = 0; k < problem.vehicles_size(); k++) {
     objective->SetCoefficient(D[k], 1);
   }
+
   objective->SetMinimization();
 
   //----Creation of the constraints----//
@@ -158,14 +163,16 @@ void run() {
   for(int i=0;i<problem.services_size();++i){
     for(int j=0;j<problem.services_size();++j){
       for(int k=0;k<problem.vehicles_size();++k){
+        for(int m = 0; m < problem.matrices_size(); ++m ){
         stringstream ss;
         ss << "ToLin" <<"("<<i<<","<<j<<","<<k<<")";
-        MPConstraint* const ct = solver.MakeRowConstraint(-100,INFINITY,ss.str());
+        MPConstraint* const ct = solver.MakeRowConstraint(-problem.matrices(m).time(problem.services(i).matrix_index()),INFINITY,ss.str());
         ct->SetCoefficient(D[k],1);
-        ct->SetCoefficient(Y[k][i],-100);
-        ct->SetCoefficient(Y[k][j],-100);
-      }
-    }
+        ct->SetCoefficient(Y[k][i],-problem.matrices(m).time(problem.services(i).matrix_index()));
+        ct->SetCoefficient(Y[k][j],-problem.matrices(m).time(problem.services(i).matrix_index()));
+       }
+     }
+   }
   }
 
   // // assignment constraint
@@ -204,10 +211,10 @@ void run() {
   for (int k = 0; k < problem.vehicles_size(); ++k) {
     stringstream ss;
     ss << "T(" << k << ")";
-    MPConstraint* const ct = solver.MakeRowConstraint(0.0, problem.vehicles()[1].duration(), ss.str());
+    MPConstraint* const ct = solver.MakeRowConstraint(0.0, problem.vehicles(k).duration(), ss.str());
 
     for (int i = 0;i < problem.services_size(); i++) {
-      ct->SetCoefficient(Y[k][i], problem.services()[i].duration());
+      ct->SetCoefficient(Y[k][i], problem.services(i).duration());
     }
   }
 
