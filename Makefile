@@ -11,7 +11,8 @@ CFLAGS := $(CFLAGS) -ggdb -Og -DDEBUG -fsanitize=address -Wall -Wextra -Wshadow 
 all: $(EXE)
 
 %.pb.cc: %.proto
-	$(OR_TOOLS_TOP)/dependencies/install/bin/protoc --cpp_out . $<
+	$(OR_TOOLS_TOP)/dependencies/install/bin/protoc --cpp_out . $< & \
+	$(OR_TOOLS_TOP)/dependencies/install/bin/protoc --ruby_out . $<
 
 problem.pb.h: problem.pb.cc
 
