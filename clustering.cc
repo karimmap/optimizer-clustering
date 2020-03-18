@@ -64,25 +64,36 @@ void printProblem(problem::Problem& problem) {
 }
 
 void compatibleVehicle(problem::Problem& problem) {
-  for (int s = 0; s < problem.services_size(); ++s) {
-    auto service = problem.mutable_services(s);
+  for (int i = 0; i < problem.services_size(); ++i) {
+    auto service = problem.mutable_services(i);
     for (int k = 0; k < problem.vehicles_size(); ++k) {
       bool compatible = true;
       auto vehicle = problem.vehicles(k);
       for (int u = 0; u < service->quantities_size() && compatible; ++u) {
-        auto quantity = service->quantities(u);
-        auto capacity = vehicle.capacities(u);
-        if (quantity > capacity.limit()) {
-          compatible = false;
-        }
+            auto quantity = service->quantities(u);
+            auto capacity = vehicle.capacities(u);
+            if (quantity > capacity.limit()) {
+                compatible = false;
+            }
+       }
+      if(service->skills_size() - vehicle.skills_size() > 0){
+        compatible = false;
       }
+        for(int s = 0; s < service->skills_size() && compatible; ++s) {
+          for(int sv = 0; sv < vehicle.skills_size() && compatible; ++sv){
+              if (service->skills(s) != vehicle.skills(s)){
+                compatible = false;
+              }
+           }
+        }
+
       if (compatible) {
         service->add_compatibale_vehicle_indices(k);
       }
     }
   }
-
 }
+
 void run() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
   const string& filename = "instance-14.bin";
@@ -98,16 +109,9 @@ void run() {
 
   compatibleVehicle(problem);
 
-
-    // for(auto service : problem.services()) {
-    //  // for( int k = 0; k < service.compatibale_vehicle_indices_size(); ++k){
-    //     cout << " the vehicles that can serve service i are "<< service.DebugString() <<endl;
-    //  // }
-    // }
-
     for(auto service : problem.services()) {
      // for( int k = 0; k < service.compatibale_vehicle_indices_size(); ++k){
-        cout << service.DebugString() <<endl;
+        cout << " "<< service.DebugString() <<endl;
      // }
     }
 
@@ -175,21 +179,17 @@ void run() {
    }
   }
 
-  // // assignment constraint
+  // assignment constraint
   for( int i = 0; i < problem.services_size(); ++i){
+    auto service = problem.services(i);
     stringstream ss;
     ss << "assign("<<i<<")";
     MPConstraint* const ct = solver.MakeRowConstraint(1.0, 1.0, ss.str());
-    for( int k =0; k < problem.services(i).compatibale_vehicle_indices_size(); ++k  ){
-           ct->SetCoefficient(Y[problem.services(i).compatibale_vehicle_indices(k)][i],1);
+    for( int k =0; k < service.compatibale_vehicle_indices_size(); ++k  ){
+           ct->SetCoefficient(Y[service.compatibale_vehicle_indices(k)][i],1);
     }
   }
 
-  //  for(auto service : problem.vehicles()) {
-  //   //  // for( int k = 0; k < service.compatibale_vehicle_indices_size(); ++k){
-  //        cout << " the vehicles that can serve service i are "<< service.DebugString() <<endl;
-  //   //  // }
-  //    }
 
   // capacity constraint for each vehicle
   for(int k = 0; k < problem.vehicles_size(); ++k){
@@ -205,6 +205,7 @@ void run() {
     }
     cout << endl;
   }
+
 
   //-------respect avail time of vehicle--------------//
 
@@ -244,7 +245,7 @@ void run() {
     for (int k = 0; k < problem.vehicles_size(); ++k) {
       cout << "- Diameter " << k << " has " << D[k]->solution_value() << endl;
       for (int i = 0; i < problem.services_size(); ++i) {
-        cout << "\t> service " << i << " is assigned to vehicle  " << k << " "
+        cout << "\t> service " << i << " is assigned to vehicle \t" << k << "-->"
              << Y[k][i]->solution_value() << endl;
       }
     }
@@ -255,8 +256,8 @@ void run() {
     cerr << "Fail! (Status: " << resultStatus << ")"
          << endl; //< see status page in the documentation
   }
-  delete lpFilePath;
 
+  delete lpFilePath;
   delete[] D;
   for (int i = 0; i < problem.vehicles_size(); ++i) {
     delete[] Y[i];

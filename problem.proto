@@ -5,6 +5,7 @@ option optimize_for = SPEED;
 
 message Matrix {
   repeated float time = 1 [packed=true];
+  repeated float distance = 2 [ packed = true ];
 }
 
 message Location{
@@ -18,6 +19,8 @@ message Service {
   uint32 duration = 2;
   uint32 matrix_index = 3;
   repeated uint32 compatibale_vehicle_indices = 4;
+  repeated string skills = 5;
+  repeated int32 day_indices = 6;
  // Location location = 4;
 
 }
@@ -35,6 +38,8 @@ message Vehicle {
   float duration = 6;
   repeated int32 day_indices = 7;
   uint32 matrix_index = 8;
+  repeated string skills = 9;
+
 }
 
 message Problem {

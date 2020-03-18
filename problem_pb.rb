@@ -7,6 +7,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("problem.proto", :syntax => :proto3) do
     add_message "problem.Matrix" do
       repeated :time, :float, 1
+      repeated :distance, :float, 2
     end
     add_message "problem.Location" do
       optional :longitude, :float, 1
@@ -18,6 +19,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :duration, :uint32, 2
       optional :matrix_index, :uint32, 3
       repeated :compatibale_vehicle_indices, :uint32, 4
+      repeated :skills, :string, 5
+      repeated :day_indices, :int32, 6
     end
     add_message "problem.Capacity" do
       optional :limit, :float, 1
@@ -30,6 +33,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :duration, :float, 6
       repeated :day_indices, :int32, 7
       optional :matrix_index, :uint32, 8
+      repeated :skills, :string, 9
     end
     add_message "problem.Problem" do
       repeated :vehicles, :message, 1, "problem.Vehicle"
