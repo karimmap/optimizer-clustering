@@ -21,7 +21,9 @@ message Service {
   repeated uint32 compatibale_vehicle_indices = 4;
   repeated string skills = 5;
   repeated int32 day_indices = 6;
- // Location location = 4;
+  Location start_location = 7;
+  Location end_location = 8;
+  string id = 9;
 
 }
 

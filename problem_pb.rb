@@ -21,6 +21,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :compatibale_vehicle_indices, :uint32, 4
       repeated :skills, :string, 5
       repeated :day_indices, :int32, 6
+      optional :start_location, :message, 7, "problem.Location"
+      optional :end_location, :message, 8, "problem.Location"
+      optional :id, :string, 9
     end
     add_message "problem.Capacity" do
       optional :limit, :float, 1

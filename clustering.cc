@@ -1,23 +1,11 @@
-#include "./limits.h"
-#include "ortools/base/logging.h"
-#include <algorithm>
-#include <cstddef>
-#include <fstream>
-#include <inttypes.h>
-#include <iomanip>
-#include <iostream>
-#include <math.h>
-#include <numeric>
-#include <ostream>
-#include <sstream>
-#include <string>
-#include <vector>
-
-#include "ortools/linear_solver/linear_solver.h"
-#include "ortools/linear_solver/linear_solver.pb.h"
 
 
-#include "problem.pb.h"
+#include "concaveman.h"
+
+
+using json = nlohmann::json;
+
+
 //#include "clusteringData.h"
 
 using namespace std;
@@ -93,7 +81,19 @@ void compatibleVehicle(problem::Problem& problem) {
     }
   }
 }
-
+ void readColor( vector < string > &color, string const & filePath ){
+   cout << "<read> Read the data " << endl;
+   ifstream f(filePath.c_str());
+   if (!f.good()){
+     cerr << "<read> Error: Could not open file " << filePath << "." << endl;
+     exit(EXIT_FAILURE);
+   }
+   color.resize(20);
+   for( int i = 0; i < 20; ++i){
+     f >> color[i];
+   }
+   f.close();
+ }
 void run() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
   const string& filename = "instance-14.bin";
@@ -131,13 +131,14 @@ void run() {
       Y[k][j] = solver.MakeIntVar(0.0, 1.0, ss.str());
     }
   }
+  // Create the variables D.
   MPVariable** const D = new MPVariable*[problem.vehicles_size()];
   for (int i = 0; i < problem.vehicles_size(); ++i) {
     stringstream ss;
     ss << "D[" << i << "]";
     D[i] = solver.MakeNumVar(0.0, INFINITY, ss.str());
   }
-
+  // Create the variables Dmax
   MPVariable* const Dmax = solver.MakeNumVar(0.0, INFINITY, "Dmax");
   //---- Creation of the objective function-----//
   cout << "creating the objective function" << endl;
@@ -222,6 +223,7 @@ void run() {
   cout << "--> Configuring the solver" << endl;
   solver.set_time_limit(600); //< sets the time limit (in seconds)
   solver.SetNumThreads(1);    //< limits the solver to single thread usage
+
   string* lpFilePath = new string("model.lp");
   solver.ExportModelAsLpFormat(true, lpFilePath);
 
@@ -257,6 +259,46 @@ void run() {
          << endl; //< see status page in the documentation
   }
 
+  //output solution
+  vector < string > color;
+  readColor(color,"color.txt");
+    std::ofstream o("pretty.json");
+    std::vector<json> v;
+    for(int k = 0; k < problem.vehicles_size(); ++k){
+      json t;
+      typedef std::array<float, 2> point_type ;
+      std::vector<point_type> points;
+      for( int i = 0; i < problem.services_size(); ++i){
+           if( Y[k][i]->solution_value() == 1){
+              t["geometry"] = { {"type", "Point"},
+              {"coordinates",
+                { problem.services(i).start_location().longitude(),
+                problem.services(i).start_location().latitude()}
+               }
+              };
+              array<float, 2> m = {problem.services(i).start_location().longitude(),problem.services(i).start_location().latitude()};
+              points.push_back(m);
+              std::string lon_lat =  std::to_string(problem.services(i).start_location().latitude()) + "," + std::to_string(problem.services(i).start_location().longitude());
+              std::string lat_lon =  std::to_string(problem.services(i).start_location().longitude()) + "," + std::to_string(problem.services(i).start_location().latitude());
+              t["properties"] = { {"color","#000000"},{"marker-size","small"},
+              {"marker-color",color[k]},{"stroke-width", 10},{"name", "test_model"},
+              {"lat_lon", lat_lon},
+              {"lon_lat", lon_lat},
+              {"duration",problem.vehicles(k).duration()},{"kg",55},
+              {"qte",11},{"v-id",problem.vehicles(k).id()}, {"s-id",problem.services(i).id()} };
+              t["type"] = "Feature";
+              v.push_back(t);
+           }
+      }
+      points.push_back(points[0]);
+      t["geometry"] = { {"type", "Polygon"},
+                        {"coordinates",{ points} }
+                      };
+      v.push_back(t);
+    }
+
+    json s = { {"type","FeatureCollection"},{"features" , v} };
+    o << std::setw(4) << s << std::endl;
   delete lpFilePath;
   delete[] D;
   for (int i = 0; i < problem.vehicles_size(); ++i) {

@@ -1,0 +1,425 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    4.7581000328063965,
+                    45.604698181152344
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.758100,45.604698",
+                "lon_lat": "45.604698,4.758100",
+                "marker-color": "#f78f85",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_1",
+                "stroke-width": 10,
+                "v-id": "vehicle_0"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.751999855041504,
+                    45.60459899902344
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.752000,45.604599",
+                "lon_lat": "45.604599,4.752000",
+                "marker-color": "#f78f85",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_2",
+                "stroke-width": 10,
+                "v-id": "vehicle_0"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.8171000480651855,
+                    45.604400634765625
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.817100,45.604401",
+                "lon_lat": "45.604401,4.817100",
+                "marker-color": "#f78f85",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_3",
+                "stroke-width": 10,
+                "v-id": "vehicle_0"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            4.7581000328063965,
+                            45.604698181152344
+                        ],
+                        [
+                            4.751999855041504,
+                            45.60459899902344
+                        ],
+                        [
+                            4.8171000480651855,
+                            45.604400634765625
+                        ],
+                        [
+                            4.7581000328063965,
+                            45.604698181152344
+                        ]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.817100,45.604401",
+                "lon_lat": "45.604401,4.817100",
+                "marker-color": "#f78f85",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_3",
+                "stroke-width": 10,
+                "v-id": "vehicle_0"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.805200099945068,
+                    45.576698303222656
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.805200,45.576698",
+                "lon_lat": "45.576698,4.805200",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_4",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.815299987792969,
+                    45.57659912109375
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.815300,45.576599",
+                "lon_lat": "45.576599,4.815300",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_5",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.677299976348877,
+                    45.25830078125
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.677300,45.258301",
+                "lon_lat": "45.258301,4.677300",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_6",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.667399883270264,
+                    45.258399963378906
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.667400,45.258400",
+                "lon_lat": "45.258400,4.667400",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_7",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.65749979019165,
+                    45.25849914550781
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.657500,45.258499",
+                "lon_lat": "45.258499,4.657500",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_8",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.677599906921387,
+                    45.26860046386719
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.677600,45.268600",
+                "lon_lat": "45.268600,4.677600",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_9",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.687699794769287,
+                    45.268699645996094
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.687700,45.268700",
+                "lon_lat": "45.268700,4.687700",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_10",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.68779993057251,
+                    45.27880096435547
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.687800,45.278801",
+                "lon_lat": "45.278801,4.687800",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_11",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.68779993057251,
+                    45.27880096435547
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.687800,45.278801",
+                "lon_lat": "45.278801,4.687800",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_12",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.7581000328063965,
+                    45.604698181152344
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.758100,45.604698",
+                "lon_lat": "45.604698,4.758100",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_13",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            4.805200099945068,
+                            45.576698303222656
+                        ],
+                        [
+                            4.815299987792969,
+                            45.57659912109375
+                        ],
+                        [
+                            4.677299976348877,
+                            45.25830078125
+                        ],
+                        [
+                            4.667399883270264,
+                            45.258399963378906
+                        ],
+                        [
+                            4.65749979019165,
+                            45.25849914550781
+                        ],
+                        [
+                            4.677599906921387,
+                            45.26860046386719
+                        ],
+                        [
+                            4.687699794769287,
+                            45.268699645996094
+                        ],
+                        [
+                            4.68779993057251,
+                            45.27880096435547
+                        ],
+                        [
+                            4.68779993057251,
+                            45.27880096435547
+                        ],
+                        [
+                            4.7581000328063965,
+                            45.604698181152344
+                        ],
+                        [
+                            4.805200099945068,
+                            45.576698303222656
+                        ]
+                    ]
+                ],
+                "type": "Polygon"
+            },
+            "properties": {
+                "color": "#000000",
+                "duration": 400000.0,
+                "kg": 55,
+                "lat_lon": "4.758100,45.604698",
+                "lon_lat": "45.604698,4.758100",
+                "marker-color": "#69a184",
+                "marker-size": "small",
+                "name": "test_model",
+                "qte": 11,
+                "s-id": "service_13",
+                "stroke-width": 10,
+                "v-id": "vehicle_1"
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}

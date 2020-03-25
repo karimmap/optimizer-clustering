@@ -1,0 +1,2686 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "large",
+        "marker-color": "#9233ff",
+        "stroke": "#000000",
+        "stroke-opacity": 0,
+        "stroke-width": 10,
+        "name": "AG43-OPT-16Trn1Jr-C90-4Jrs_V10_center",
+        "lat_lon": "45.50871944004359,4.291745626928902",
+        "lon_lat": "4.291745626928902,45.50871944004359",
+        "matrix_index": 388,
+        "point_count": 42,
+        "depot_distance": 9058.477272727272,
+        "balance_coeff": 0.53022,
+        "total_visits": 589,
+        "total_duration": 126957,
+        "total_kg": 6785.6500000000015,
+        "total_l": 28980.52,
+        "total_qte": 3854
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.291745626928902,
+          45.50871944004359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1044568_0",
+        "lat_lon": "45.51358,4.302056",
+        "lon_lat": "4.302056,45.51358",
+        "distance": 0,
+        "distance_balanced": 0,
+        "matrix_index": 388,
+        "visits": 9,
+        "duration": 951,
+        "kg": 54.510000000000005,
+        "l": 287.4,
+        "qte": 36,
+        "duration_from_and_to_depot": 8824,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.302056,
+          45.51358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1095427_0",
+        "lat_lon": "45.534396,4.286189",
+        "lon_lat": "4.286189,45.534396",
+        "distance": 261,
+        "distance_balanced": 138.65529256802384,
+        "matrix_index": 405,
+        "visits": 2,
+        "duration": 1008,
+        "kg": 2.58,
+        "l": 0,
+        "qte": 6,
+        "duration_from_and_to_depot": 8849,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.286189,
+          45.534396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1042538_0",
+        "lat_lon": "45.584461,4.296041",
+        "lon_lat": "4.296041,45.584461",
+        "distance": 602,
+        "distance_balanced": 319.81029167030783,
+        "matrix_index": 415,
+        "visits": 6,
+        "duration": 2628,
+        "kg": 186.66,
+        "l": 726.75,
+        "qte": 54,
+        "duration_from_and_to_depot": 9739,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.296041,
+          45.584461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1111255_0",
+        "lat_lon": "45.514575,4.263352",
+        "lon_lat": "4.263352,45.514575",
+        "distance": 393,
+        "distance_balanced": 208.77980834955315,
+        "matrix_index": 392,
+        "visits": 21,
+        "duration": 852,
+        "kg": 61.2,
+        "l": 263.89,
+        "qte": 51,
+        "duration_from_and_to_depot": 9033,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.263352,
+          45.514575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1134780_0",
+        "lat_lon": "45.546972,4.307688",
+        "lon_lat": "4.307688,45.546972",
+        "distance": 252,
+        "distance_balanced": 133.87407558291957,
+        "matrix_index": 409,
+        "visits": 9,
+        "duration": 2124,
+        "kg": 190.34999999999997,
+        "l": 545.7,
+        "qte": 99,
+        "duration_from_and_to_depot": 9056,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.307688,
+          45.546972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1026085_0",
+        "lat_lon": "45.529483,4.288929",
+        "lon_lat": "4.288929,45.529483",
+        "distance": 181,
+        "distance_balanced": 96.15558603376364,
+        "matrix_index": 401,
+        "visits": 31,
+        "duration": 15192,
+        "kg": 531.0600000000001,
+        "l": 2235.26,
+        "qte": 373,
+        "duration_from_and_to_depot": 8912,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.288929,
+          45.529483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1044522_0",
+        "lat_lon": "45.511901,4.263695",
+        "lon_lat": "4.263695,45.511901",
+        "distance": 436,
+        "distance_balanced": 231.62340061171798,
+        "matrix_index": 387,
+        "visits": 17,
+        "duration": 1905,
+        "kg": 103.41000000000001,
+        "l": 395.65999999999997,
+        "qte": 53,
+        "duration_from_and_to_depot": 9119,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.263695,
+          45.511901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1043716_0",
+        "lat_lon": "45.528479,4.183388",
+        "lon_lat": "4.183388,45.528479",
+        "distance": 860,
+        "distance_balanced": 456.87184524329695,
+        "matrix_index": 400,
+        "visits": 21,
+        "duration": 4398,
+        "kg": 171.86999999999998,
+        "l": 640.8,
+        "qte": 63,
+        "duration_from_and_to_depot": 9969,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.183388,
+          45.528479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1037987_0",
+        "lat_lon": "45.522926,4.269168",
+        "lon_lat": "4.269168,45.522926",
+        "distance": 357,
+        "distance_balanced": 189.65494040913603,
+        "matrix_index": 395,
+        "visits": 24,
+        "duration": 3042,
+        "kg": 114.74999999999999,
+        "l": 466.2,
+        "qte": 36,
+        "duration_from_and_to_depot": 9180,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.269168,
+          45.522926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1162643_0",
+        "lat_lon": "45.544217,4.282962",
+        "lon_lat": "4.282962,45.544217",
+        "distance": 351,
+        "distance_balanced": 186.46746241906652,
+        "matrix_index": 408,
+        "visits": 8,
+        "duration": 492,
+        "kg": 14.58,
+        "l": 115.68,
+        "qte": 12,
+        "duration_from_and_to_depot": 9140,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.282962,
+          45.544217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1060219_0",
+        "lat_lon": "45.433184,4.32445",
+        "lon_lat": "4.32445,45.433184",
+        "distance": 997,
+        "distance_balanced": 529.6525926832174,
+        "matrix_index": 370,
+        "visits": 33,
+        "duration": 1863,
+        "kg": 40.17,
+        "l": 137.43,
+        "qte": 36,
+        "duration_from_and_to_depot": 8883,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.32445,
+          45.433184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1110709_0",
+        "lat_lon": "45.523513,4.284014",
+        "lon_lat": "4.284014,45.523513",
+        "distance": 295,
+        "distance_balanced": 156.7176678450844,
+        "matrix_index": 396,
+        "visits": 15,
+        "duration": 1806,
+        "kg": 100.68,
+        "l": 543.3,
+        "qte": 60,
+        "duration_from_and_to_depot": 9070,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.284014,
+          45.523513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1035844_0",
+        "lat_lon": "45.584992,4.310537",
+        "lon_lat": "4.310537,45.584992",
+        "distance": 568,
+        "distance_balanced": 301.74791639324724,
+        "matrix_index": 416,
+        "visits": 8,
+        "duration": 572,
+        "kg": 19.7,
+        "l": 116.8,
+        "qte": 34,
+        "duration_from_and_to_depot": 9683,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.310537,
+          45.584992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1111250_0",
+        "lat_lon": "45.593015,4.315366",
+        "lon_lat": "4.315366,45.593015",
+        "distance": 713,
+        "distance_balanced": 378.7786344865939,
+        "matrix_index": 418,
+        "visits": 3,
+        "duration": 224,
+        "kg": 16.92,
+        "l": 74.94,
+        "qte": 14,
+        "duration_from_and_to_depot": 9962,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.315366,
+          45.593015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1113329_0",
+        "lat_lon": "45.566362,4.295287",
+        "lon_lat": "4.295287,45.566362",
+        "distance": 528,
+        "distance_balanced": 280.49806312611713,
+        "matrix_index": 412,
+        "visits": 27,
+        "duration": 12672,
+        "kg": 1491.72,
+        "l": 5685.36,
+        "qte": 720,
+        "duration_from_and_to_depot": 9593,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.295287,
+          45.566362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1144627_0",
+        "lat_lon": "45.483031,4.351197",
+        "lon_lat": "4.351197,45.483031",
+        "distance": 401,
+        "distance_balanced": 213.02977900297918,
+        "matrix_index": 383,
+        "visits": 25,
+        "duration": 8014,
+        "kg": 650.76,
+        "l": 2865.15,
+        "qte": 137,
+        "duration_from_and_to_depot": 8186,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.351197,
+          45.483031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1010794_0",
+        "lat_lon": "45.530114,4.280844",
+        "lon_lat": "4.280844,45.530114",
+        "distance": 377,
+        "distance_balanced": 200.27986704270108,
+        "matrix_index": 402,
+        "visits": 23,
+        "duration": 7418,
+        "kg": 302.65,
+        "l": 1487.34,
+        "qte": 252,
+        "duration_from_and_to_depot": 8909,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.280844,
+          45.530114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "522666_0",
+        "lat_lon": "45.467407,4.372555",
+        "lon_lat": "4.372555,45.467407",
+        "distance": 689,
+        "distance_balanced": 366.02872252631585,
+        "matrix_index": 378,
+        "visits": 12,
+        "duration": 7200,
+        "kg": 193.68,
+        "l": 754.8,
+        "qte": 36,
+        "duration_from_and_to_depot": 7998,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.372555,
+          45.467407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "521922_0",
+        "lat_lon": "45.531136,4.285564",
+        "lon_lat": "4.285564,45.531136",
+        "distance": 288,
+        "distance_balanced": 152.99894352333664,
+        "matrix_index": 404,
+        "visits": 12,
+        "duration": 7200,
+        "kg": 159.24,
+        "l": 524.4000000000001,
+        "qte": 36,
+        "duration_from_and_to_depot": 9096,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.285564,
+          45.531136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1162280_0",
+        "lat_lon": "45.499799,4.189371",
+        "lon_lat": "4.189371,45.499799",
+        "distance": 816,
+        "distance_balanced": 433.49700664945385,
+        "matrix_index": 385,
+        "visits": 43,
+        "duration": 6620,
+        "kg": 286.79,
+        "l": 992.1500000000002,
+        "qte": 117,
+        "duration_from_and_to_depot": 9898,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.189371,
+          45.499799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1035484_0",
+        "lat_lon": "45.471748,4.343376",
+        "lon_lat": "4.343376,45.471748",
+        "distance": 641,
+        "distance_balanced": 340.5288986057597,
+        "matrix_index": 382,
+        "visits": 26,
+        "duration": 6560,
+        "kg": 282.75,
+        "l": 1724.22,
+        "qte": 244,
+        "duration_from_and_to_depot": 8597,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.343376,
+          45.471748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1010790_0",
+        "lat_lon": "45.466814,4.37767",
+        "lon_lat": "4.37767,45.466814",
+        "distance": 691,
+        "distance_balanced": 367.0912151896723,
+        "matrix_index": 377,
+        "visits": 21,
+        "duration": 2620,
+        "kg": 45.96000000000001,
+        "l": 213.5,
+        "qte": 62,
+        "duration_from_and_to_depot": 7912,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.37767,
+          45.466814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1126032_0",
+        "lat_lon": "45.469604,4.365247",
+        "lon_lat": "4.365247,45.469604",
+        "distance": 671,
+        "distance_balanced": 356.46628855610726,
+        "matrix_index": 381,
+        "visits": 30,
+        "duration": 3870,
+        "kg": 344.96999999999997,
+        "l": 1643.46,
+        "qte": 261,
+        "duration_from_and_to_depot": 8056,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.365247,
+          45.469604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1010294_0",
+        "lat_lon": "45.543719,4.300332",
+        "lon_lat": "4.300332,45.543719",
+        "distance": 266,
+        "distance_balanced": 141.3115242264151,
+        "matrix_index": 407,
+        "visits": 8,
+        "duration": 3060,
+        "kg": 54.60000000000001,
+        "l": 884,
+        "qte": 26,
+        "duration_from_and_to_depot": 9049,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.300332,
+          45.543719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "500497_0",
+        "lat_lon": "45.51398,4.30355",
+        "lon_lat": "4.30355,45.51398",
+        "distance": 63,
+        "distance_balanced": 33.46851889572989,
+        "matrix_index": 389,
+        "visits": 3,
+        "duration": 627,
+        "kg": 22.68,
+        "l": 115.5,
+        "qte": 21,
+        "duration_from_and_to_depot": 8957,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.30355,
+          45.51398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1110719_0",
+        "lat_lon": "45.524124,4.279782",
+        "lon_lat": "4.279782,45.524124",
+        "distance": 305,
+        "distance_balanced": 162.03013116186693,
+        "matrix_index": 398,
+        "visits": 13,
+        "duration": 2798,
+        "kg": 68.80000000000001,
+        "l": 513.53,
+        "qte": 38,
+        "duration_from_and_to_depot": 9166,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.279782,
+          45.524124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1132056_0",
+        "lat_lon": "45.540344,4.317569",
+        "lon_lat": "4.317569,45.540344",
+        "distance": 386,
+        "distance_balanced": 205.06108402780538,
+        "matrix_index": 406,
+        "visits": 10,
+        "duration": 3944,
+        "kg": 292.62,
+        "l": 778.8,
+        "qte": 226,
+        "duration_from_and_to_depot": 9317,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.317569,
+          45.540344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1010801_0",
+        "lat_lon": "45.43377,4.322228",
+        "lon_lat": "4.322228,45.43377",
+        "distance": 1040,
+        "distance_balanced": 552.4961849453823,
+        "matrix_index": 371,
+        "visits": 8,
+        "duration": 572,
+        "kg": 19.7,
+        "l": 116.8,
+        "qte": 34,
+        "duration_from_and_to_depot": 8909,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.322228,
+          45.43377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1035845_0",
+        "lat_lon": "45.554674,4.12219",
+        "lon_lat": "4.12219,45.554674",
+        "distance": 1298,
+        "distance_balanced": 689.5577385183715,
+        "matrix_index": 411,
+        "visits": 4,
+        "duration": 362,
+        "kg": 17.6,
+        "l": 82.8,
+        "qte": 33,
+        "duration_from_and_to_depot": 10895,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.12219,
+          45.554674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1071651_0",
+        "lat_lon": "45.465288,4.376251",
+        "lon_lat": "4.376251,45.465288",
+        "distance": 761,
+        "distance_balanced": 404.27845840714997,
+        "matrix_index": 374,
+        "visits": 9,
+        "duration": 1920,
+        "kg": 251.1,
+        "l": 1135.92,
+        "qte": 207,
+        "duration_from_and_to_depot": 7963,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.376251,
+          45.465288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1112562_0",
+        "lat_lon": "45.466698,4.353508",
+        "lon_lat": "4.353508,45.466698",
+        "distance": 638,
+        "distance_balanced": 338.9351596107249,
+        "matrix_index": 375,
+        "visits": 6,
+        "duration": 1458,
+        "kg": 135.98,
+        "l": 720.5999999999999,
+        "qte": 140,
+        "duration_from_and_to_depot": 8453,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.353508,
+          45.466698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1043717_0",
+        "lat_lon": "45.526725,4.185613",
+        "lon_lat": "4.185613,45.526725",
+        "distance": 907,
+        "distance_balanced": 481.8404228321748,
+        "matrix_index": 399,
+        "visits": 21,
+        "duration": 4398,
+        "kg": 146.79,
+        "l": 546,
+        "qte": 63,
+        "duration_from_and_to_depot": 10065,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.185613,
+          45.526725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1112712_0",
+        "lat_lon": "45.503012,4.260155",
+        "lon_lat": "4.260155,45.503012",
+        "distance": 487,
+        "distance_balanced": 258.71696352730885,
+        "matrix_index": 386,
+        "visits": 5,
+        "duration": 326,
+        "kg": 19.7,
+        "l": 109.99,
+        "qte": 18,
+        "duration_from_and_to_depot": 9486,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.260155,
+          45.503012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1010799_0",
+        "lat_lon": "45.499308,4.242064",
+        "lon_lat": "4.242064,45.499308",
+        "distance": 699,
+        "distance_balanced": 371.34118584309834,
+        "matrix_index": 384,
+        "visits": 8,
+        "duration": 572,
+        "kg": 17.9,
+        "l": 78.8,
+        "qte": 34,
+        "duration_from_and_to_depot": 9808,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.242064,
+          45.499308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1036050_0",
+        "lat_lon": "45.56862,4.29545",
+        "lon_lat": "4.29545,45.56862",
+        "distance": 582,
+        "distance_balanced": 309.1853650367428,
+        "matrix_index": 413,
+        "visits": 12,
+        "duration": 788,
+        "kg": 21.18,
+        "l": 118.3,
+        "qte": 42,
+        "duration_from_and_to_depot": 9732,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.29545,
+          45.56862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1080485_0",
+        "lat_lon": "45.549357,4.290489",
+        "lon_lat": "4.290489,45.549357",
+        "distance": 498,
+        "distance_balanced": 264.56067317576964,
+        "matrix_index": 410,
+        "visits": 14,
+        "duration": 1585,
+        "kg": 97.51000000000002,
+        "l": 326.17999999999995,
+        "qte": 49,
+        "duration_from_and_to_depot": 9431,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.290489,
+          45.549357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "506288_0",
+        "lat_lon": "45.453666,4.299388",
+        "lon_lat": "4.299388,45.453666",
+        "distance": 701,
+        "distance_balanced": 372.40367850645487,
+        "matrix_index": 373,
+        "visits": 6,
+        "duration": 2640,
+        "kg": 64.92,
+        "l": 253.20000000000002,
+        "qte": 12,
+        "duration_from_and_to_depot": 9328,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.299388,
+          45.453666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1114738_0",
+        "lat_lon": "45.52025,4.278733",
+        "lon_lat": "4.278733,45.52025",
+        "distance": 223,
+        "distance_balanced": 118.46793196425025,
+        "matrix_index": 393,
+        "visits": 16,
+        "duration": 1108,
+        "kg": 59.79,
+        "l": 230.07000000000002,
+        "qte": 35,
+        "duration_from_and_to_depot": 9126,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.278733,
+          45.52025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1131321_0",
+        "lat_lon": "45.437328,4.331689",
+        "lon_lat": "4.331689,45.437328",
+        "distance": 940,
+        "distance_balanced": 499.3715517775571,
+        "matrix_index": 372,
+        "visits": 9,
+        "duration": 870,
+        "kg": 85.56,
+        "l": 325.2,
+        "qte": 48,
+        "duration_from_and_to_depot": 8703,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.331689,
+          45.437328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1112787_0",
+        "lat_lon": "45.590136,4.318948",
+        "lon_lat": "4.318948,45.590136",
+        "distance": 763,
+        "distance_balanced": 405.34095107050643,
+        "matrix_index": 417,
+        "visits": 5,
+        "duration": 298,
+        "kg": 15.78,
+        "l": 91.02,
+        "qte": 14,
+        "duration_from_and_to_depot": 9936,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.318948,
+          45.590136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1135892_0",
+        "lat_lon": "45.469261,4.376504",
+        "lon_lat": "4.376504,45.469261",
+        "distance": 648,
+        "distance_balanced": 344.2476229275074,
+        "matrix_index": 379,
+        "visits": 3,
+        "duration": 204,
+        "kg": 14.34,
+        "l": 58.01,
+        "qte": 12,
+        "duration_from_and_to_depot": 7828,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.376504,
+          45.469261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#9233ff",
+        "marker-size": "small",
+        "marker-color": "#9233ff",
+        "name": "1154577_0",
+        "lat_lon": "45.521739,4.271951",
+        "lon_lat": "4.271951,45.521739",
+        "distance": 331,
+        "distance_balanced": 175.8425357855015,
+        "matrix_index": 394,
+        "visits": 3,
+        "duration": 196,
+        "kg": 12.14,
+        "l": 55.61,
+        "qte": 10,
+        "duration_from_and_to_depot": 9270,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.271951,
+          45.521739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "large",
+        "marker-color": "#ffcd33",
+        "stroke": "#000000",
+        "stroke-opacity": 0,
+        "stroke-width": 10,
+        "name": "AG43-OPT-16Trn1Jr-C90-4Jrs_V9_center",
+        "lat_lon": "46.447416578085324,4.786087916374704",
+        "lon_lat": "4.786087916374704,46.447416578085324",
+        "matrix_index": 519,
+        "point_count": 31,
+        "depot_distance": 11349.8125,
+        "balance_coeff": 0.37196,
+        "total_visits": 275,
+        "total_duration": 75017,
+        "total_kg": 2992.3299999999995,
+        "total_l": 12549.47,
+        "total_qte": 2058
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.786087916374704,
+          46.447416578085324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1026397_0",
+        "lat_lon": "46.368297,4.844563",
+        "lon_lat": "4.844563,46.368297",
+        "distance": 0,
+        "distance_balanced": 0,
+        "matrix_index": 519,
+        "visits": 8,
+        "duration": 1542,
+        "kg": 11.58,
+        "l": 143.68,
+        "qte": 29,
+        "duration_from_and_to_depot": 8232,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.844563,
+          46.368297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1094812_0",
+        "lat_lon": "46.360093,4.846745",
+        "lon_lat": "4.846745,46.360093",
+        "distance": 187,
+        "distance_balanced": 69.81309959880834,
+        "matrix_index": 516,
+        "visits": 9,
+        "duration": 531,
+        "kg": 19.680000000000003,
+        "l": 58.8,
+        "qte": 15,
+        "duration_from_and_to_depot": 8392,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.846745,
+          46.360093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1090844_0",
+        "lat_lon": "46.021986,4.499237",
+        "lon_lat": "4.499237,46.021986",
+        "distance": 3284,
+        "distance_balanced": 1226.022561938431,
+        "matrix_index": 472,
+        "visits": 10,
+        "duration": 2616,
+        "kg": 372.06,
+        "l": 1489.35,
+        "qte": 273,
+        "duration_from_and_to_depot": 7975,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.499237,
+          46.021986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1026486_0",
+        "lat_lon": "46.5593,4.915136",
+        "lon_lat": "4.915136,46.5593",
+        "distance": 1578,
+        "distance_balanced": 589.1180276305859,
+        "matrix_index": 529,
+        "visits": 9,
+        "duration": 1714,
+        "kg": 10.14,
+        "l": 141.76,
+        "qte": 27,
+        "duration_from_and_to_depot": 10553,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.915136,
+          46.5593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1057817_0",
+        "lat_lon": "46.431949,4.91974",
+        "lon_lat": "4.91974,46.431949",
+        "distance": 1194,
+        "distance_balanced": 445.7585075988083,
+        "matrix_index": 522,
+        "visits": 6,
+        "duration": 9120,
+        "kg": 312.36,
+        "l": 1152.6,
+        "qte": 84,
+        "duration_from_and_to_depot": 10536,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.91974,
+          46.431949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "3020119_0",
+        "lat_lon": "46.55879,4.99624",
+        "lon_lat": "4.99624,46.55879",
+        "distance": 2101,
+        "distance_balanced": 784.3707072571997,
+        "matrix_index": 528,
+        "visits": 12,
+        "duration": 5280,
+        "kg": 134.88,
+        "l": 496.79999999999995,
+        "qte": 24,
+        "duration_from_and_to_depot": 11636,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.99624,
+          46.55879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1107989_0",
+        "lat_lon": "46.364767,4.841689",
+        "lon_lat": "4.841689,46.364767",
+        "distance": 110,
+        "distance_balanced": 41.06652917576961,
+        "matrix_index": 518,
+        "visits": 16,
+        "duration": 889,
+        "kg": 39.58,
+        "l": 229.07999999999998,
+        "qte": 28,
+        "duration_from_and_to_depot": 8063,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.841689,
+          46.364767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1026621_0",
+        "lat_lon": "46.382702,4.866214",
+        "lon_lat": "4.866214,46.382702",
+        "distance": 300,
+        "distance_balanced": 111.9996250248262,
+        "matrix_index": 521,
+        "visits": 3,
+        "duration": 1610,
+        "kg": 11.4,
+        "l": 158,
+        "qte": 21,
+        "duration_from_and_to_depot": 8739,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.866214,
+          46.382702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1143189_0",
+        "lat_lon": "46.540486,5.034686",
+        "lon_lat": "5.034686,46.540486",
+        "distance": 2448,
+        "distance_balanced": 913.9169402025818,
+        "matrix_index": 527,
+        "visits": 6,
+        "duration": 2384,
+        "kg": 336.64,
+        "l": 1434.9,
+        "qte": 296,
+        "duration_from_and_to_depot": 12038,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.034686,
+          46.540486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1147763_0",
+        "lat_lon": "46.345318,4.890098",
+        "lon_lat": "4.890098,46.345318",
+        "distance": 840,
+        "distance_balanced": 313.5989500695134,
+        "matrix_index": 515,
+        "visits": 3,
+        "duration": 260,
+        "kg": 22.78,
+        "l": 99.78,
+        "qte": 19,
+        "duration_from_and_to_depot": 9251,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.890098,
+          46.345318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1139993_0",
+        "lat_lon": "46.491842,5.244391",
+        "lon_lat": "5.244391,46.491842",
+        "distance": 3002,
+        "distance_balanced": 1120.7429144150942,
+        "matrix_index": 526,
+        "visits": 12,
+        "duration": 9120,
+        "kg": 178.68,
+        "l": 742.5600000000001,
+        "qte": 48,
+        "duration_from_and_to_depot": 10051,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.244391,
+          46.491842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1090435_0",
+        "lat_lon": "46.75491,5.24301",
+        "lon_lat": "5.24301,46.75491",
+        "distance": 4176,
+        "distance_balanced": 1559.0347803455809,
+        "matrix_index": 552,
+        "visits": 12,
+        "duration": 9120,
+        "kg": 293.76,
+        "l": 1175.04,
+        "qte": 48,
+        "duration_from_and_to_depot": 13216,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.24301,
+          46.75491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1139985_0",
+        "lat_lon": "46.616168,4.212603",
+        "lon_lat": "4.212603,46.616168",
+        "distance": 4760,
+        "distance_balanced": 1777.0607170605758,
+        "matrix_index": 533,
+        "visits": 12,
+        "duration": 7200,
+        "kg": 76.32000000000001,
+        "l": 362.88,
+        "qte": 36,
+        "duration_from_and_to_depot": 15733,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.212603,
+          46.616168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1056062_0",
+        "lat_lon": "46.578104,4.24407",
+        "lon_lat": "4.24407,46.578104",
+        "distance": 4236,
+        "distance_balanced": 1581.4347053505462,
+        "matrix_index": 531,
+        "visits": 12,
+        "duration": 3360,
+        "kg": 59.519999999999996,
+        "l": 238.07999999999998,
+        "qte": 12,
+        "duration_from_and_to_depot": 14638,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.24407,
+          46.578104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1026872_0",
+        "lat_lon": "46.376166,4.845577",
+        "lon_lat": "4.845577,46.376166",
+        "distance": 124,
+        "distance_balanced": 46.29317834359483,
+        "matrix_index": 520,
+        "visits": 24,
+        "duration": 4014,
+        "kg": 264.52,
+        "l": 1161.84,
+        "qte": 148,
+        "duration_from_and_to_depot": 8407,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.845577,
+          46.376166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1071672_0",
+        "lat_lon": "46.334582,5.21443",
+        "lon_lat": "5.21443,46.334582",
+        "distance": 2486,
+        "distance_balanced": 928.1035593723933,
+        "matrix_index": 513,
+        "visits": 13,
+        "duration": 725,
+        "kg": 48.25,
+        "l": 189.14999999999998,
+        "qte": 34,
+        "duration_from_and_to_depot": 9282,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.21443,
+          46.334582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1121464_0",
+        "lat_lon": "46.337834,5.128423",
+        "lon_lat": "5.128423,46.337834",
+        "distance": 2167,
+        "distance_balanced": 809.0106247626613,
+        "matrix_index": 514,
+        "visits": 9,
+        "duration": 612,
+        "kg": 40.32,
+        "l": 185.79,
+        "qte": 33,
+        "duration_from_and_to_depot": 9374,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.128423,
+          46.337834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1131573_0",
+        "lat_lon": "46.438604,4.645936",
+        "lon_lat": "4.645936,46.438604",
+        "distance": 2066,
+        "distance_balanced": 771.3040843376366,
+        "matrix_index": 523,
+        "visits": 5,
+        "duration": 794,
+        "kg": 42.620000000000005,
+        "l": 156.2,
+        "qte": 116,
+        "duration_from_and_to_depot": 10311,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.645936,
+          46.438604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1090848_0",
+        "lat_lon": "46.05611,4.494353",
+        "lon_lat": "4.494353,46.05611",
+        "distance": 3505,
+        "distance_balanced": 1308.5289523733863,
+        "matrix_index": 500,
+        "visits": 12,
+        "duration": 1104,
+        "kg": 133.92,
+        "l": 457.9,
+        "qte": 87,
+        "duration_from_and_to_depot": 8414,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.494353,
+          46.05611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1070405_0",
+        "lat_lon": "46.660332,4.373345",
+        "lon_lat": "4.373345,46.660332",
+        "distance": 4314,
+        "distance_balanced": 1610.554607857001,
+        "matrix_index": 536,
+        "visits": 4,
+        "duration": 605,
+        "kg": 17.42,
+        "l": 43.3,
+        "qte": 33,
+        "duration_from_and_to_depot": 15025,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.373345,
+          46.660332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1131862_0",
+        "lat_lon": "46.626679,5.22403",
+        "lon_lat": "5.22403,46.626679",
+        "distance": 3697,
+        "distance_balanced": 1380.208712389275,
+        "matrix_index": 534,
+        "visits": 6,
+        "duration": 2428,
+        "kg": 228.15,
+        "l": 977.5,
+        "qte": 364,
+        "duration_from_and_to_depot": 11330,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.22403,
+          46.626679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1131569_0",
+        "lat_lon": "46.290474,4.304097",
+        "lon_lat": "4.304097,46.290474",
+        "distance": 3831,
+        "distance_balanced": 1430.2352115670308,
+        "matrix_index": 512,
+        "visits": 5,
+        "duration": 474,
+        "kg": 16.98,
+        "l": 77.4,
+        "qte": 44,
+        "duration_from_and_to_depot": 12463,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.304097,
+          46.290474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "3024491_0",
+        "lat_lon": "46.671332,4.82973",
+        "lon_lat": "4.82973,46.671332",
+        "distance": 2331,
+        "distance_balanced": 870.2370864428997,
+        "matrix_index": 538,
+        "visits": 12,
+        "duration": 1527,
+        "kg": 71.88,
+        "l": 328.79999999999995,
+        "qte": 75,
+        "duration_from_and_to_depot": 12151,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.82973,
+          46.671332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1095596_0",
+        "lat_lon": "46.470022,4.08119",
+        "lon_lat": "4.08119,46.470022",
+        "distance": 4178,
+        "distance_balanced": 1559.7814445124131,
+        "matrix_index": 524,
+        "visits": 12,
+        "duration": 1296,
+        "kg": 25.710000000000004,
+        "l": 83.1,
+        "qte": 21,
+        "duration_from_and_to_depot": 14573,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.08119,
+          46.470022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1137425_0",
+        "lat_lon": "46.364247,4.844383",
+        "lon_lat": "4.844383,46.364247",
+        "distance": 103,
+        "distance_balanced": 38.453204591857,
+        "matrix_index": 517,
+        "visits": 3,
+        "duration": 660,
+        "kg": 9.959999999999999,
+        "l": 39.599999999999994,
+        "qte": 3,
+        "duration_from_and_to_depot": 8023,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.844383,
+          46.364247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1068337_0",
+        "lat_lon": "46.480963,3.982088",
+        "lon_lat": "3.982088,46.480963",
+        "distance": 4566,
+        "distance_balanced": 1704.6342928778547,
+        "matrix_index": 525,
+        "visits": 6,
+        "duration": 1680,
+        "kg": 24.18,
+        "l": 96.60000000000001,
+        "qte": 6,
+        "duration_from_and_to_depot": 15355,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.982088,
+          46.480963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1128166_0",
+        "lat_lon": "46.599147,4.059059",
+        "lon_lat": "4.059059,46.599147",
+        "distance": 5077,
+        "distance_balanced": 1895.4069875034759,
+        "matrix_index": 532,
+        "visits": 6,
+        "duration": 1032,
+        "kg": 33,
+        "l": 148.76999999999998,
+        "qte": 18,
+        "duration_from_and_to_depot": 16359,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.059059,
+          46.599147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1159580_0",
+        "lat_lon": "46.560053,4.982666",
+        "lon_lat": "4.982666,46.560053",
+        "distance": 2004,
+        "distance_balanced": 748.1574951658391,
+        "matrix_index": 530,
+        "visits": 3,
+        "duration": 960,
+        "kg": 32.099999999999994,
+        "l": 128.39999999999998,
+        "qte": 6,
+        "duration_from_and_to_depot": 11386,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.982666,
+          46.560053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1134258_0",
+        "lat_lon": "46.70634,5.003625",
+        "lon_lat": "5.003625,46.70634",
+        "distance": 2914,
+        "distance_balanced": 1087.8896910744786,
+        "matrix_index": 542,
+        "visits": 4,
+        "duration": 1800,
+        "kg": 110.69999999999999,
+        "l": 495,
+        "qte": 99,
+        "duration_from_and_to_depot": 13175,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.003625,
+          46.70634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1167725_0",
+        "lat_lon": "46.339597,5.209271",
+        "lon_lat": "5.209271,46.339597",
+        "distance": 2530,
+        "distance_balanced": 944.5301710427011,
+        "matrix_index": 1,
+        "visits": 18,
+        "duration": 360,
+        "kg": 0,
+        "l": 0,
+        "qte": 0,
+        "duration_from_and_to_depot": 9433,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.209271,
+          46.339597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "color": "#ffcd33",
+        "marker-size": "small",
+        "marker-color": "#ffcd33",
+        "name": "1161616_0",
+        "lat_lon": "46.631006,5.240371",
+        "lon_lat": "5.240371,46.631006",
+        "distance": 3943,
+        "distance_balanced": 1472.0484049096324,
+        "matrix_index": 535,
+        "visits": 3,
+        "duration": 200,
+        "kg": 13.24,
+        "l": 56.809999999999995,
+        "qte": 11,
+        "duration_from_and_to_depot": 11819,
+        "v_id": [],
+        "skills": [],
+        "days": [
+          "0_day_skill",
+          "1_day_skill",
+          "2_day_skill",
+          "3_day_skill",
+          "4_day_skill"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.240371,
+          46.631006
+        ]
+      }
+    }
+  ]
+}
+
