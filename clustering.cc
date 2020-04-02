@@ -1,26 +1,23 @@
 
+#include "ortools/base/logging.h"
+#include "ortools/linear_solver/linear_solver.h"
+#include "ortools/linear_solver/linear_solver.pb.h"
 
-#include "concaveman.h"
 
+#include <src/cpp/flann/flann.hpp>
+
+#include "concave.h"
+
+#include "problem.pb.h"
+
+#include "ext-lib/json.h"
 
 using json = nlohmann::json;
-
-
-//#include "clusteringData.h"
 
 using namespace std;
 namespace operations_research {
 
 void printProblem(problem::Problem& problem) {
-  cout << "number of vehicles is " << problem.vehicles_size() << endl;
-  cout << " number of services is " << problem.services_size() << endl;
-  cout << "**************************Duration of each service "
-          "is********************************"
-       << endl;
-
-  // for (auto service : problem.services())
-  //   cout << service.duration() << " | " << endl;
-
   for (auto matrix : problem.matrices())
     cout << matrix.ShortDebugString() << endl;
 
@@ -50,11 +47,11 @@ void printProblem(problem::Problem& problem) {
   }
   }
 }
-
 void compatibleVehicle(problem::Problem& problem) {
   for (int i = 0; i < problem.services_size(); ++i) {
     auto service = problem.mutable_services(i);
     for (int k = 0; k < problem.vehicles_size(); ++k) {
+      auto vehicle_add = problem.mutable_vehicles(k);
       bool compatible = true;
       auto vehicle = problem.vehicles(k);
       for (int u = 0; u < service->quantities_size() && compatible; ++u) {
@@ -76,9 +73,11 @@ void compatibleVehicle(problem::Problem& problem) {
         }
 
       if (compatible) {
-        service->add_compatibale_vehicle_indices(k);
+        service->add_compatible_vehicle_indices(k);
       }
+       vehicle_add -> set_id(k);
     }
+    service -> set_id(i);
   }
 }
  void readColor( vector < string > &color, string const & filePath ){
@@ -110,44 +109,42 @@ void run() {
   compatibleVehicle(problem);
 
     for(auto service : problem.services()) {
-     // for( int k = 0; k < service.compatibale_vehicle_indices_size(); ++k){
         cout << " "<< service.DebugString() <<endl;
-     // }
     }
 
-  // Create the linear solver with the GLOP backend.
   // MPSolver solver("simple_lp_program", MPSolver::GLOP_LINEAR_PROGRAMMING);
   MPSolver solver("simple_mip_program", MPSolver::CBC_MIXED_INTEGER_PROGRAMMING);
-  // Create the variables y.
+  const double infinity = solver.infinity(); // to use if a variable is not bounded or to create inequality constraints
 
 
+ // Create the variables y.
   MPVariable*** const Y = new MPVariable**[problem.vehicles_size()];
-  for (int k = 0; k < problem.vehicles_size(); ++k) {
-    Y[k] = new MPVariable*[problem.services_size()];
-    for (int j = 0; j < problem.services_size(); ++j) {
+  for (auto vehicle: problem.vehicles()) {
+    Y[vehicle.id()] = new MPVariable*[problem.services_size()];
+    for (auto service: problem.services()) {
       stringstream ss;
-      ss << "Y[" << k << "]"
-         << "[" << j << "]";
-      Y[k][j] = solver.MakeIntVar(0.0, 1.0, ss.str());
+      ss << "Y[" << vehicle.id() << "]"
+         << "[" << service.id() << "]";
+      Y[vehicle.id()][service.id()] = solver.MakeIntVar(0.0, 1.0, ss.str());
     }
   }
   // Create the variables D.
   MPVariable** const D = new MPVariable*[problem.vehicles_size()];
-  for (int i = 0; i < problem.vehicles_size(); ++i) {
+  for (auto vehicle: problem.vehicles()) {
     stringstream ss;
-    ss << "D[" << i << "]";
-    D[i] = solver.MakeNumVar(0.0, INFINITY, ss.str());
+    ss << "D[" << vehicle.id() << "]";
+    D[vehicle.id()] = solver.MakeNumVar(0.0, infinity, ss.str());
   }
   // Create the variables Dmax
-  MPVariable* const Dmax = solver.MakeNumVar(0.0, INFINITY, "Dmax");
+  MPVariable* const Dmax = solver.MakeNumVar(0.0, infinity, "Dmax");
   //---- Creation of the objective function-----//
   cout << "creating the objective function" << endl;
 
   MPObjective* const objective = solver.MutableObjective();
   objective->SetCoefficient(Dmax, 1);
-  for (int k = 0; k < problem.vehicles_size(); k++) {
-    objective->SetCoefficient(D[k], 1);
-  }
+  // for(auto vehicle: problem.vehicles()){
+  //   objective->SetCoefficient(D[vehicle.id()], 1);
+  // }
 
   objective->SetMinimization();
 
@@ -156,29 +153,29 @@ void run() {
 
   //-----first constraint-----//
 
-  for (int k = 0; k < problem.vehicles_size(); k++) {
+  for (auto vehicle:problem.vehicles()) {
     stringstream ss;
     ss << "";
-    MPConstraint* const ct = solver.MakeRowConstraint(-INFINITY, 0.0, ss.str());
-    ct->SetCoefficient(D[k], 1);
+    MPConstraint* const ct = solver.MakeRowConstraint(-infinity, 0.0, ss.str());
+    ct->SetCoefficient(D[vehicle.id()], 1);
     ct->SetCoefficient(Dmax, -1);
   }
 
-  // -----Second constraint ------//
-  for(int i=0;i<problem.services_size();++i){
-    for(int j=0;j<problem.services_size();++j){
-      for(int k=0;k<problem.vehicles_size();++k){
-        for(int m = 0; m < problem.matrices_size(); ++m ){
-        stringstream ss;
-        ss << "ToLin" <<"("<<i<<","<<j<<","<<k<<")";
-        MPConstraint* const ct = solver.MakeRowConstraint(-problem.matrices(m).time(problem.services(i).matrix_index()),INFINITY,ss.str());
-        ct->SetCoefficient(D[k],1);
-        ct->SetCoefficient(Y[k][i],-problem.matrices(m).time(problem.services(i).matrix_index()));
-        ct->SetCoefficient(Y[k][j],-problem.matrices(m).time(problem.services(i).matrix_index()));
-       }
-     }
-   }
+ // -----Second constraint ------//
+for(auto k : problem.vehicles()){
+  auto matrix = problem.matrices(k.matrix_index()).distance();
+  for(auto i : problem.services()){
+    for(auto j : problem.services()){
+      auto d_ijk = matrix.at(i.matrix_index() * sqrt(matrix.size()) + j.matrix_index());
+      stringstream ss;
+      ss << "ToLin" << "(" << i.id() << "," << j.id() << "," << k.id() << ")";
+      MPConstraint* const ct = solver.MakeRowConstraint(-d_ijk, INFINITY, ss.str());
+      ct->SetCoefficient(D[k.id()], 1);
+      ct->SetCoefficient(Y[k.id()][i.id()], -d_ijk);
+      ct->SetCoefficient(Y[k.id()][j.id()], -d_ijk);
+    }
   }
+}
 
   // assignment constraint
   for( int i = 0; i < problem.services_size(); ++i){
@@ -186,11 +183,10 @@ void run() {
     stringstream ss;
     ss << "assign("<<i<<")";
     MPConstraint* const ct = solver.MakeRowConstraint(1.0, 1.0, ss.str());
-    for( int k =0; k < service.compatibale_vehicle_indices_size(); ++k  ){
-           ct->SetCoefficient(Y[service.compatibale_vehicle_indices(k)][i],1);
+    for( int k =0; k < service.compatible_vehicle_indices_size(); ++k  ){
+       ct->SetCoefficient(Y[service.compatible_vehicle_indices(k)][i],1);
     }
   }
-
 
   // capacity constraint for each vehicle
   for(int k = 0; k < problem.vehicles_size(); ++k){
@@ -200,23 +196,19 @@ void run() {
       if(problem.vehicles()[k].capacities()[u].limit() >= 0){
        MPConstraint* const ct = solver.MakeRowConstraint(0.0, problem.vehicles(k).capacities(u).limit(), ss.str());
          for(int i=0;i<problem.services_size();++i){
-           ct->SetCoefficient(Y[k][i],problem.services(i).quantities(u));
+            ct->SetCoefficient(Y[k][i],problem.services(i).quantities(u));
          }
        }
     }
-    cout << endl;
   }
 
-
   //-------respect avail time of vehicle--------------//
-
-  for (int k = 0; k < problem.vehicles_size(); ++k) {
+  for(auto vehicle: problem.vehicles()) {
     stringstream ss;
-    ss << "T(" << k << ")";
-    MPConstraint* const ct = solver.MakeRowConstraint(0.0, problem.vehicles(k).duration(), ss.str());
-
-    for (int i = 0;i < problem.services_size(); i++) {
-      ct->SetCoefficient(Y[k][i], problem.services(i).duration());
+    ss << "T(" << vehicle.id() << ")";
+    MPConstraint* const ct = solver.MakeRowConstraint(0.0, vehicle.duration(), ss.str());
+    for(auto service: problem.services()) {
+       ct->SetCoefficient(Y[vehicle.id()][service.id()], service.duration());
     }
   }
 
@@ -224,82 +216,119 @@ void run() {
   solver.set_time_limit(600); //< sets the time limit (in seconds)
   solver.SetNumThreads(1);    //< limits the solver to single thread usage
 
-  string* lpFilePath = new string("model.lp");
-  solver.ExportModelAsLpFormat(true, lpFilePath);
+  string* modelInLpFormat = new string();
+  solver.ExportModelAsLpFormat(false,modelInLpFormat);
+
+  //print the model in a file
+  ofstream writer ("model.lp");
+  if(writer.is_open()) {
+    writer << (*modelInLpFormat);
+    writer.close();
+  }
+  else cout << "Unable to open the file and write the model";
+  delete modelInLpFormat;
 
   // --- Solver launch ---
   cout << "--> Running the solver" << endl;
   const MPSolver::ResultStatus resultStatus = solver.Solve();
 
   // --- Solver results retrieval ---
-  cout << "--> Retrieving solver results " << endl;
+  cout << "--> Retrieving solver results" << endl;
   if (resultStatus == MPSolver::OPTIMAL || (resultStatus == MPSolver::FEASIBLE)) {
-    // the solver has computed the optimal solution or a feasible solution (when the time
-    // limit is reached before proving optimality)
-    cout << "Succes! (Status: " << resultStatus << ")"
-         << endl; //< prints the solver status (see the documentation)
+    // the solver has computed the optimal solution or a feasible solution (when the time limit is reached before proving optimality)
+    cout << "Succes! (Status: " << resultStatus << ")" << endl; //< prints the solver status (see the documentation)
     cout << "Runtime : " << solver.wall_time() << " milliseconds" << endl;
-
     cout << "--> Printing results " << endl;
-    cout << "Objective value = " << objective->Value()
-         << endl; //<gets the value of the objective function for the best computed
-                  //solution (optimal if no time limit)
-    for (int k = 0; k < problem.vehicles_size(); ++k) {
-      cout << "- Diameter " << k << " has " << D[k]->solution_value() << endl;
-      for (int i = 0; i < problem.services_size(); ++i) {
-        cout << "\t> service " << i << " is assigned to vehicle \t" << k << "-->"
-             << Y[k][i]->solution_value() << endl;
+    cout << "Objective value = " << objective->Value() << endl; //<gets the value of the objective function for the best computed
+     //solution (optimal if no time limit)
+    for (auto vehicle: problem.vehicles()) {
+      cout << "- Diameter " << vehicle.id() << " has " << D[vehicle.id()]->solution_value() << endl;
+      for (auto service: problem.services()) {
+        cout << "\t> service " << service.id() << " is assigned to vehicle \t" << vehicle.id() << "-->"
+             << Y[vehicle.id()][service.id()]->solution_value() << endl;
       }
     }
     cout << "- Diameter Max   " << Dmax->solution_value() << endl;
-  } else {
-    // the model is infeasible (maybe wrong) or the solver has reached the time limit
-    // without finding a feasible solution
-    cerr << "Fail! (Status: " << resultStatus << ")"
-         << endl; //< see status page in the documentation
+  }
+  else {
+    // the model is infeasible (maybe wrong) or the solver has reached the time limit without finding a feasible solution
+    cerr << "Fail! (Status: " << resultStatus << ")" << endl; //< see status page in the documentation
   }
 
   //output solution
   vector < string > color;
   readColor(color,"color.txt");
-    std::ofstream o("pretty.json");
-    std::vector<json> v;
-    for(int k = 0; k < problem.vehicles_size(); ++k){
-      json t;
-      typedef std::array<float, 2> point_type ;
-      std::vector<point_type> points;
-      for( int i = 0; i < problem.services_size(); ++i){
-           if( Y[k][i]->solution_value() == 1){
-              t["geometry"] = { {"type", "Point"},
-              {"coordinates",
-                { problem.services(i).start_location().longitude(),
-                problem.services(i).start_location().latitude()}
-               }
-              };
-              array<float, 2> m = {problem.services(i).start_location().longitude(),problem.services(i).start_location().latitude()};
-              points.push_back(m);
-              std::string lon_lat =  std::to_string(problem.services(i).start_location().latitude()) + "," + std::to_string(problem.services(i).start_location().longitude());
-              std::string lat_lon =  std::to_string(problem.services(i).start_location().longitude()) + "," + std::to_string(problem.services(i).start_location().latitude());
-              t["properties"] = { {"color","#000000"},{"marker-size","small"},
-              {"marker-color",color[k]},{"stroke-width", 10},{"name", "test_model"},
-              {"lat_lon", lat_lon},
-              {"lon_lat", lon_lat},
-              {"duration",problem.vehicles(k).duration()},{"kg",55},
-              {"qte",11},{"v-id",problem.vehicles(k).id()}, {"s-id",problem.services(i).id()} };
-              t["type"] = "Feature";
-              v.push_back(t);
-           }
+
+  std::ofstream o("pretty.json");
+  std::vector<json> v;
+
+  for(int k = 0; k < problem.vehicles_size(); ++k){
+    json t;
+    PointVector points;
+    for( int i = 0; i < problem.services_size(); ++i){
+      for( int q = 0; q < problem.services(i).quantities_size(); ++q){
+          if( Y[k][i]->solution_value() >= 1e-4){
+            t["geometry"] = { {"type", "Point"},
+            {"coordinates",
+              { problem.services(i).location().longitude(),
+              problem.services(i).location().latitude()}
+              }
+            };
+            Point p;
+            p.x = double(problem.services(i).location().longitude());
+            p.y = double(problem.services(i).location().latitude());
+            AddPoint(points, p);
+
+            string lon_lat =  to_string(problem.services(i).location().latitude()) + "," + to_string(problem.services(i).location().longitude());
+            string lat_lon =  to_string(problem.services(i).location().longitude()) + "," + to_string(problem.services(i).location().latitude());
+            t["properties"] = { {"color",color[k]},{"stroke",color[k]},{"marker-size","large"},
+            {"marker-color",color[k]},{"stroke-width", 10},{"name", "test_model"},
+            {"lat_lon", lat_lon},
+            {"lon_lat", lon_lat},
+            {"duration",problem.vehicles(k).duration()},{"kg",55},
+            {"qte",problem.services(i).quantities(q)},{"v-id",problem.vehicles(k).name()}, {"s-id",problem.services(i).name()} };
+            t["type"] = "Feature";
+            v.push_back(t);
+          }
       }
-      points.push_back(points[0]);
-      t["geometry"] = { {"type", "Polygon"},
-                        {"coordinates",{ points} }
-                      };
-      v.push_back(t);
     }
 
-    json s = { {"type","FeatureCollection"},{"features" , v} };
-    o << std::setw(4) << s << std::endl;
-  delete lpFilePath;
+    bool iterate = true;
+    int startpoint = 0;
+    RemoveDuplicates(points);
+    IdentifyPoints(points);
+    startpoint = std::min(std::max(startpoint, 3), (int)points.size() - 1);
+    PointVector hull = ConcaveHull(points, (size_t)startpoint, iterate);
+    cout << endl;
+    typedef double T;
+    typedef std::array<T, 2> point_type;
+    std::vector<point_type> Hull;
+    for (int i = 0; i < hull.size(); i++){
+      array<T, 2> m = {hull[i].x,hull[i].y};
+      Hull.push_back(m);
+    }
+    int n = hull.size();
+    if (Hull[0][0] != Hull[n - 1][0] && Hull[0][1] != Hull[n - 1][1] ){
+      array<T, 2> m = {hull[0].x,hull[0].y};
+      Hull.push_back(m);
+    }
+    t["geometry"] = { {"type", "Polygon"},
+                     {"coordinates",{Hull} }
+                    };
+    string lon_lat =  to_string(problem.vehicles(k).start_location().latitude()) + "," + to_string(problem.vehicles(k).start_location().longitude());
+    string lat_lon =  to_string(problem.vehicles(k).start_location().longitude()) + "," + to_string(problem.vehicles(k).start_location().latitude());
+    t["properties"] = {{"color",color[k]},{"fill",color[k]},{"marker-size","small"},
+              {"marker-color",color[k]},{"stroke-width", 10},{"name", problem.vehicles(k).name()},
+              {"duration",problem.vehicles(k).duration()},{"v-id",problem.vehicles(k).name()},{"kg",55},
+              {"qte",11},{"lat_lon", lat_lon},{"lon_lat", lon_lat} };
+    v.push_back(t);
+
+  }
+
+  json s = { {"type","FeatureCollection"},{"features" , v} };
+  o << std::setw(4) << s << std::endl;
+
+
   delete[] D;
   for (int i = 0; i < problem.vehicles_size(); ++i) {
     delete[] Y[i];
@@ -307,10 +336,10 @@ void run() {
   delete[] Y;
 }
 
-
 } // namespace operations_research
 
-int main(/*int argc, char** argv*/) {
+int main(int argc, char* argv[]) {
   operations_research::run();
   return EXIT_SUCCESS;
+
 }

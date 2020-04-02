@@ -9,38 +9,38 @@ message Matrix {
 }
 
 message Location{
-  float longitude = 1;
-  float latitude = 2;
+  double longitude = 1;
+  double latitude = 2;
   uint32 matrix_index = 3;
 }
 
 message Service {
-  repeated float quantities = 1;
-  uint32 duration = 2;
+  repeated double quantities = 1;
+  float duration = 2;
   uint32 matrix_index = 3;
-  repeated uint32 compatibale_vehicle_indices = 4;
+  repeated uint32 compatible_vehicle_indices = 4;
   repeated string skills = 5;
   repeated int32 day_indices = 6;
-  Location start_location = 7;
-  Location end_location = 8;
-  string id = 9;
+  Location location = 7;
+  string name = 9;
+  uint32 id = 10;
 
 }
 
 message Capacity {
-  float limit = 1;
+  double limit = 1;
 }
 
 message Vehicle {
-  string id = 1;
+  string name = 1;
   repeated Capacity capacities = 2;
-  // TimeWindow time_window = 3;
   Location start_location = 4;
   Location end_location = 5;
-  float duration = 6;
+  double duration = 6;
   repeated int32 day_indices = 7;
   uint32 matrix_index = 8;
   repeated string skills = 9;
+  uint32 id = 10;
 
 }
 
